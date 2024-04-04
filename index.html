@@ -8,12 +8,54 @@
     <!-- daisyUI and tailwindcss -->
     <link href="https://cdn.jsdelivr.net/npm/daisyui@4.9.0/dist/full.min.css" rel="stylesheet" type="text/css" />
     <script src="https://cdn.tailwindcss.com"></script>
-    <!-- font-awesome  -->
+    <!-- font-awesome icon link -->
     <script src="https://kit.fontawesome.com/c3b317684b.js" crossorigin="anonymous"></script>
+    <!-- tailwindcss custom config -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brown: '#B68C5A',
+                        gray: '#707070',
+                    },
+                    backgroundImage: {
+                        hero_bg: "url('images/banner.png')",
+                    },
+                }
+            }
+        }
+    </script>
+    <!-- google fonts -->
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,800;1,800&display=swap');
+
+        .eb-garamond-extrabold {
+            font-family: "EB Garamond", serif;
+            font-optical-sizing: auto;
+            font-weight: 800;
+            font-style: normal;
+        }
+
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+        .poppins-regular {
+            font-family: "Poppins", sans-serif;
+            font-weight: 400;
+            font-style: normal;
+        }
+
+        .poppins-semibold {
+            font-family: "Poppins", sans-serif;
+            font-weight: 600;
+            font-style: normal;
+        }
+    </style>
 </head>
 
 <body>
-    <header>
+    <header class="max-w-screen-xl mx-auto">
+        <!-- navBar  -->
         <nav>
             <div class="navbar bg-base-100">
                 <div class="navbar-start">
@@ -26,22 +68,26 @@
                             </svg>
                         </div>
                         <ul tabindex="0"
-                            class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
-                            <li><a>Item 1</a></li>
+                            class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52 text-gray">
+                            <li><a>Home</a></li>
                             <li>
-                                <a>Parent</a>
-                                <ul class="p-2">
-                                    <li><a>Submenu 1</a></li>
-                                    <li><a>Submenu 2</a></li>
-                                </ul>
+                                <a>Services</a>
                             </li>
-                            <li><a>Item 3</a></li>
+                            <li>
+                                <a>Cases</a>
+                            </li>
+                            <li>
+                                <a>Blog</a>
+                            </li>
+                            <li>
+                                <a>Contact Us</a>
+                            </li>
                         </ul>
                     </div>
-                    <a class="btn btn-ghost text-xl">Justice</a>
+                    <a href=""><img src="images/logo2.png" alt=""></a>
                 </div>
                 <div class="navbar-center hidden lg:flex">
-                    <ul class="menu menu-horizontal px-1">
+                    <ul class="menu menu-horizontal px-1 text-gray text-base">
                         <li><a>Home</a></li>
                         <li>
                             <a>Services <span><i class="fa-solid fa-angle-right"></i></span></a>
@@ -58,10 +104,27 @@
                     </ul>
                 </div>
                 <div class="navbar-end">
-                    <a class="btn">Free Consultation</a>
+                    <a class="btn bg-brown text-white poppins-semibold text-lg">Free Consultation</a>
                 </div>
             </div>
         </nav>
+        <!-- hero section -->
+        <section>
+            <div class="hero bg-hero_bg">
+                <div class="text-center text-white">
+                    <div class="max-w-3xl">
+                        <h2 class="mb-5 text-7xl eb-garamond-extrabold">We Provide Effective Legal Solutions</h2>
+                        <p class="mb-8">There are many variations of passages of Lorem Ipsum available, but the majority
+                            have suffered alteration in some form, by injected humour.</p>
+                        <form action="">
+                            <label class="input input-bordered flex items-center gap-2">
+                                <input type="text" class="grow" placeholder="Search" />
+                            </label>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
     </header>
     <main>
 
